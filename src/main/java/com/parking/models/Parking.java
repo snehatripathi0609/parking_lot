@@ -1,6 +1,6 @@
-package models;
+package com.parking.models;
 
-import utils.Constants;
+import com.parking.utils.Constants;
 
 import java.util.HashMap;
 import java.util.Map;

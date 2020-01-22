@@ -1,13 +1,13 @@
-package inputProcessor;
+package com.parking.inputProcessor;
 
 import com.flextrade.jfixture.JFixture;
-import exception.ParkingLotException;
-import models.Parking;
+import com.parking.exception.ParkingLotException;
+import com.parking.models.Parking;
+import com.parking.services.EvaluateStatusForParkingLot;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import services.EvaluateStatusForParkingLot;
 
 class InputFileProcessorTest {
 
@@ -19,7 +19,8 @@ class InputFileProcessorTest {
     void setUp() throws ParkingLotException {
         JFixture fixture = new JFixture();
         inputfileProcessor= new InputFileProcessor(evaluateStatusForParkingLot);
-        Mockito.when(evaluateStatusForParkingLot.evaluateStatus(Mockito.anyMap())).thenReturn(fixture.create(Parking.class));
+        Parking parking =fixture.create(Parking.class);
+        Mockito.when(evaluateStatusForParkingLot.evaluateStatus(Mockito.anyMap())).thenReturn(parking);
     }
 
     @AfterEach

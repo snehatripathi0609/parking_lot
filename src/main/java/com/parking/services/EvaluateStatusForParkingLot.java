@@ -1,8 +1,8 @@
-package services;
+package com.parking.services;
 
-import exception.ParkingLotException;
-import models.Parking;
-import utils.Constants;
+import com.parking.exception.ParkingLotException;
+import com.parking.models.Parking;
+import com.parking.utils.Constants;
 
 import java.util.HashMap;
 import java.util.Map;

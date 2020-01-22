@@ -1,6 +1,6 @@
-package services;
+package com.parking.services;
 
-import utils.Constants;
+import com.parking.utils.Constants;
 
 public class ParkingCalculator {
 

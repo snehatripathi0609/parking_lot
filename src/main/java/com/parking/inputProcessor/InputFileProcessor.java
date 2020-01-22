@@ -1,8 +1,8 @@
-package inputProcessor;
+package com.parking.inputProcessor;
 
-import exception.ParkingLotException;
-import services.EvaluateStatusForParkingLot;
-import utils.Constants;
+import com.parking.exception.ParkingLotException;
+import com.parking.services.EvaluateStatusForParkingLot;
+import com.parking.utils.Constants;
 
 import java.io.IOException;
 import java.nio.file.Files;

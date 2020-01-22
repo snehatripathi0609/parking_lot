@@ -1,4 +1,4 @@
-package exception;
+package com.parking.exception;
 
 public class ParkingLotException extends Exception {
 
