@@ -24,6 +24,7 @@ public class InputFileProcessor {
             List<String> allLines = Files.readAllLines(Paths.get(path));
             Map<String, String> parkingQuery = new HashMap<>();
             for (String line : allLines) {
+                System.out.println("Current line is: "+line);
                 String[] parkingInstruction = line.split(" ");
                 if (parkingInstruction.length < 1 && (Constants.status).equals(parkingInstruction[0])) {
                     throw new ParkingLotException("Invalid Instruction Found!");

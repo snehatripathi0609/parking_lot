@@ -16,12 +16,15 @@ public class EvaluateStatusForParkingLot {
         if (total_slots < 1) {
             throw new ParkingLotException("Invalid number of parking slots!");
         }
+        parkingSlotDetail.initParkingSlots(total_slots);
         Map<String, String> status = new HashMap<>();
 
         for (Map.Entry<String, String> entry : parkingQuery.entrySet()) {
             String key = entry.getKey();
             String val = entry.getValue();
             if (Constants.park.equals(key)) {
+                System.out.println("Key:"+key);
+                System.out.println("val:"+val);
                 Integer freeSlot = parkingSlotDetail.getFirstFreeSlot();
                 if (freeSlot != null) {
                     parkingSlotDetail.parkCar(freeSlot, val);

@@ -29,7 +29,7 @@ class InputFileProcessorTest {
 
     @Test
     void processInputFile() throws ParkingLotException {
-        String path="/home/coditas/IdeaProjects/parking_lot/bin/parking_lot file_inputs.txt";
+        String path="/home/coditas/IdeaProjects/parking_lot/bin/file_inputs.txt";
         inputfileProcessor.processInputFile(path);
     }
 }
